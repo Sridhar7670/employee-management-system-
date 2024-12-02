@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    background-color: #222529;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.left {
+    background-color: #292c31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left form input,
+.left form select,
+.left form button {
+    background-color: #292c31;
+    color: white;
+    border-radius: 1rem;
+    padding: 6px;
+}
+
+.right {
+    overflow-x: auto;
+}
+
+.right table {
+    width: 100%;
+    border-collapse: collapse;
+    border:none;
+}
+
+.right table thead tr th,
+.right table tbody tr td {
+    border: 2px solid #3f454d;
+    padding: 0.25rem;
+    text-align: center;
+}
+
+.right table thead tr th {
+    color: aliceblue;
+    font-size: small;
+}
+
+.right table tbody tr td {
+    color: #858d9a;
+}
+
+.fa-regular,
+.fa-solid {
+    color: #858d9a;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fa-regular:hover,
+.fa-solid:hover {
+    transform: scale(1.2);
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 1200px){
+    .root {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .root {
+        grid-template-columns: 1fr 2fr; /* Two column layout */
+    }
+
+   
+
+    .left form {
+        width: 50%; /* Ensure form width is responsive */
+    }
+
+    .right table,
+    .right table th,
+    .right table td {
+        font-size: smaller; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 899px) {
+    .root {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto auto; /* Adjust rows for responsive layout */
+    }
+
+    
+
+    .left form {
+        width: 50%; /* Ensure form width is responsive */
+    }
+
+    .right table,
+    .right table th,
+    .right table td {
+        font-size: smaller; /* Adjust font size for smaller screens */
+    }
+}
