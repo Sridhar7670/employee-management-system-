@@ -12,27 +12,44 @@
     gap: 10px;
     padding: 10px;
 }
-
+h1{
+    color: #858d9a;
+}
 .left {
     background-color: #292c31;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.emptable{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
 
-.left form {
+.exemp_column td{
+    text-decoration: line-through;
+}
+
+.input-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-.left form input,
-.left form select,
-.left form button {
+.input-container input,
+.input-container select,
+.input-container button {
     background-color: #292c31;
     color: white;
     border-radius: 1rem;
     padding: 6px;
+    border: 1px solid #444;
 }
 
 .right {
@@ -42,7 +59,7 @@
 .right table {
     width: 100%;
     border-collapse: collapse;
-    border:none;
+    border: none;
 }
 
 .right table thead tr th,
@@ -68,6 +85,13 @@
     cursor: pointer;
     transition: 0.3s;
 }
+.vip{
+    background-color: #3f454d;
+    color: #858d9a;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
 
 .fa-regular:hover,
 .fa-solid:hover {
@@ -81,39 +105,19 @@
     }
 }
 
-@media (min-width: 900px) {
-    .root {
-        grid-template-columns: 1fr 2fr; /* Two column layout */
-    }
-
-   
-
-    .left form {
-        width: 50%; /* Ensure form width is responsive */
-    }
-
-    .right table,
-    .right table th,
-    .right table td {
-        font-size: smaller; /* Adjust font size for smaller screens */
-    }
-}
-
 @media (max-width: 899px) {
     .root {
-        grid-template-columns: 1fr; /* Single column layout */
-        grid-template-rows: auto auto; /* Adjust rows for responsive layout */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
     }
 
-    
-
-    .left form {
-        width: 50%; /* Ensure form width is responsive */
+    .input-container {
+        width: 50%;
     }
 
     .right table,
     .right table th,
     .right table td {
-        font-size: smaller; /* Adjust font size for smaller screens */
+        font-size: smaller;
     }
 }
