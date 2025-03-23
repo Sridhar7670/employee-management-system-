@@ -200,6 +200,8 @@ function displayTerminatedEmployees() {
         
     }
 }
+
+
 function deleterevokedemployee(index){
     if (confirm("Are you sure you want to delete this employee?")) {
         const terminated_list = terminateemp();
